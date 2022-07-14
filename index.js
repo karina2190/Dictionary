@@ -8,7 +8,7 @@ document.getElementById("add").onclick = function() {
         document.getElementById("list").innerHTML += li;
         document.getElementById("input").value = ""; 
         words[index] = text;
-        +index;
+        ++index;
     }
 }
 
