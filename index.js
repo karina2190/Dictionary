@@ -2,6 +2,7 @@ const words = [];
 var index = 0;
 
 document.getElementById("add").onclick = function() {
+    document.getElementById("doesYourWordExist").innerHTML = "";
     var text = document.getElementById("input").value; 
     if (!(words.includes(text)) && text != "") {
         var li = "<li>" + text + "</li>";
@@ -15,8 +16,8 @@ document.getElementById("add").onclick = function() {
 document.getElementById("Search").onclick = function() {
     var text = document.getElementById("input").value;
     if (words.indexOf(text) !== -1) {
-        alert("Word exists!");
+        document.getElementById("doesYourWordExist").innerHTML = 'This word already exists!';
     } else {
-        alert("Word does not exist!");
+        document.getElementById("doesYourWordExist").innerHTML = 'This word does not exist!';
     }
 }
